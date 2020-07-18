@@ -1,4 +1,3 @@
-import { SpinnerService } from './services/spinner-service/spinner.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
