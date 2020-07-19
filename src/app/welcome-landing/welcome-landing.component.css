@@ -1,0 +1,6 @@
+.pull-to-right {
+  display: flex;
+  float: right;
+  position: absolute;
+  right: 0;
+}

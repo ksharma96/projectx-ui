@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeLandingComponent } from './welcome-landing/welcome-landing.component';
 import { SignUpComponent } from './welcome-landing/sign-up/sign-up.component';
@@ -37,13 +37,19 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './welcome-landing/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+// import {routingComponents} from './../app/app-routing.module.ts'
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeLandingComponent,
     SignUpComponent,
+    LoginComponent,
+    routingComponents
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,

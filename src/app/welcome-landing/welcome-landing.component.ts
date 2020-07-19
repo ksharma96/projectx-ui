@@ -1,6 +1,4 @@
-import { SpinnerService } from './../services/spinner-service/spinner.service';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-welcome-landing',
@@ -9,27 +7,21 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WelcomeLandingComponent implements OnInit {
 
-  username:String;
-  password:String;
+  showSignupClicked=false;
 
-  showSpinner:Boolean;
-
-  constructor(private spinnerService:SpinnerService,
-    private httpClient:HttpClient) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  async login(){
-     this.showSpinner=true;
-     await this.delay(200);
-    this.showSpinner=false;
+  clickedSignUp() {
+    this.showSignupClicked=true;
+  }
 
+  goHome() {
+    this.showSignupClicked=false;
   }
 
 
-  delay(ms: number) {
-    return new Promise( resolve => setTimeout(resolve, ms) );
-    }
 
 }
